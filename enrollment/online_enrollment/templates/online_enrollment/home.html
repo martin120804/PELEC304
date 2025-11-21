@@ -1,0 +1,17 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Home Page</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+    <div class="container">
+        <h2>Welcome to Your Home Page, {{ user.username }}!</h2>
+        <p>You are now logged in.</p>
+
+        <a href="{% url 'logout_user' %}" class="btn-logout">Logout</a>
+    </div>
+</body>
+</html>
